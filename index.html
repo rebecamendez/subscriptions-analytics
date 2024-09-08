@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Analyze your YouTube subscriptions with detailed insights on categories." />
+    <meta name="keywords" content="YouTube, Subscriptions, Analytics, Data Visualization" />
+    <title>YouTube Subscriptions Analysis</title>
+
+    <link rel="stylesheet" href="./assets/styles.css" />
+
+    <script defer src="https://www.gstatic.com/charts/loader.js"></script>
+    <script defer src="./app.js" type="module"></script>
+  </head>
+  <body>
+    <header>
+      <h1>YouTube Subscriptions Analytics</h1>
+      <h2>This app uses AI to categorize your YouTube subscriptions and visualize your interests.</h2>
+    </header>
+
+    <section aria-labelledby="action-section-title">
+      <h2 id="action-section-title" class="visually-hidden">Actions</h2>
+      <button id="auth-button" aria-label="Sign in with YouTube">Sign in with YouTube</button>
+      <button id="get-subscriptions" aria-label="Get YouTube subscriptions">Get Subscriptions</button>
+    </section>
+
+    <div id="total-subscriptions" aria-live="polite" aria-labelledby="total-subscriptions-title"></div>
+
+    <div id="loader" class="hidden" aria-busy="true" aria-live="assertive" aria-labelledby="loader-title">
+      <h2 id="loader-title" class="visually-hidden">Loading</h2>
+      <div class="spinner"></div>
+      <p>Please wait, categorizing channels. This may take 15-30 seconds...</p>
+    </div>
+
+    <div class="container">
+      <aside class="left-panel" aria-labelledby="subscriptions-list-title">
+        <h2 id="subscriptions-list-title" class="visually-hidden">Subscriptions List</h2>
+        <ul id="subscriptions-list" aria-live="polite"></ul>
+      </aside>
+
+      <section class="right-panel" aria-labelledby="category-chart-title">
+        <h2 id="category-chart-title" class="visually-hidden">Category Chart</h2>
+        <div id="category-chart"></div>
+      </section>
+    </div>
+  </body>
+</html>

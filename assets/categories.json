@@ -1,0 +1,52 @@
+[
+  {
+    "kind": "technology",
+    "name": "Technology",
+    "description": "Channels about gadgets, software development, artificial intelligence, and tech product reviews."
+  },
+  {
+    "kind": "education",
+    "name": "Education",
+    "description": "Tutorials, academic lessons, online courses, and educational content on various disciplines."
+  },
+  {
+    "kind": "entertainment",
+    "name": "Entertainment",
+    "description": "Comedy, sketches, podcasts, movie and series reviews, viral videos, and general leisure content."
+  },
+  {
+    "kind": "video_games",
+    "name": "Video Games",
+    "description": "Gameplay, reviews, live streaming, eSports, and news from the gaming world."
+  },
+  {
+    "kind": "music",
+    "name": "Music",
+    "description": "Music videos, concerts, covers, music lessons, music production, and album reviews."
+  },
+  {
+    "kind": "sports_fitness",
+    "name": "Sports and Fitness",
+    "description": "Workout routines, nutrition, general sports, training, and analysis of sports events."
+  },
+  {
+    "kind": "science",
+    "name": "Science",
+    "description": "Scientific content, experiments, research advancements, and topics in astronomy, biology, physics, and chemistry."
+  },
+  {
+    "kind": "cooking_gastronomy",
+    "name": "Cooking and Gastronomy",
+    "description": "Recipes, culinary techniques, restaurant reviews, and all things related to food."
+  },
+  {
+    "kind": "travel_adventure",
+    "name": "Travel and Adventure",
+    "description": "Travel vlogs, destination explorations, cultural experiences, travel guides, and tips for travelers."
+  },
+  {
+    "kind": "health_wellness",
+    "name": "Health and Wellness",
+    "description": "Content on healthy living, mindfulness, yoga, mental and physical health, and nutrition."
+  }
+]

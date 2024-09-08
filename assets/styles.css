@@ -1,0 +1,205 @@
+/* Variables CSS */
+:root {
+  --primary-color: #6c757d;
+  --secondary-color: #5a6268;
+  --background-color: #f4f4f9;
+  --text-color: #333;
+  --spinner-border-color: #f3f3f3;
+  --font-size-base: 1rem;
+  --font-size-large: 1.2rem;
+  --border-radius: 5px;
+  --box-shadow-light: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --box-shadow-hover: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Global styles */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.1rem;
+  font-weight: normal;
+  color: #555;
+}
+
+button {
+  display: none;
+  border: none;
+  padding: 10px 20px;
+  font-size: var(--font-size-base);
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  margin: 10px;
+  background-color: var(--primary-color);
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}
+
+canvas {
+  margin-top: 30px;
+  max-width: 100%;
+  max-height: 80vh;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Layout for dashboard */
+.container {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  align-items: stretch;
+}
+
+.left-panel,
+.right-panel {
+  flex: 1;
+  padding: 10px;
+}
+
+#category-chart {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+}
+
+/* Subscription list */
+#subscriptions-list {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.subscription-item {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: var(--box-shadow-light);
+  margin-bottom: 15px;
+  padding: 15px;
+  transition: box-shadow 0.3s ease;
+}
+
+.subscription-item:hover {
+  box-shadow: var(--box-shadow-hover);
+}
+
+.subscription-item strong {
+  font-size: var(--font-size-large);
+  margin-bottom: 5px;
+  color: var(--primary-color);
+}
+
+/* Spinner */
+.spinner {
+  border: 8px solid var(--spinner-border-color);
+  border-top: 8px solid var(--primary-color);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Loader */
+#loader {
+  display: none;
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  color: #555;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  width: 300px;
+  margin: 20px auto;
+}
+
+/* Expandable details */
+details {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+}
+
+summary {
+  cursor: pointer;
+  font-size: var(--font-size-base);
+}
+
+.channel-list {
+  padding-left: 20px;
+}
+
+.channel-list li {
+  margin: 5px 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1rem;
+  }
+
+  button {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .subscription-item strong {
+    font-size: 1rem;
+  }
+}
